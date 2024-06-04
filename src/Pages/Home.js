@@ -11,7 +11,7 @@ const Home = () => {
                     <div className="text-xl">I am <span className="border border-2 border-t-0 border-l-0 border-r-0">web developer</span></div>
                     </div>
                 </div>
-                <div ><img className="rounded-full myPicImage" width={900} height={900} src={myPic}/></div>
+                <div ><img alt='loading' className="rounded-full myPicImage" width={900} height={900} src={myPic}/></div>
             </div>
             
         </div>

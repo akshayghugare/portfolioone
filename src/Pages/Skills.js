@@ -1,6 +1,5 @@
 import React from "react";
 import "../../src/mystyle.css"
-import myPic from "../Assets/myPic.jpg"
 const Skills = () => {
     return (
         <div className="bgImage h-screen text-white  w-full">

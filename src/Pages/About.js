@@ -14,7 +14,7 @@ const About = () => {
           </div>
 
             <div className="flex gap-4">
-            <div ><img className="rounded-md myPicImage" width={400}  src={myPic}/></div>
+            <div ><img alt='loading' className="rounded-md myPicImage" width={400}  src={myPic}/></div>
             <div className="w-full">
                     <div className="text-2xl">Web Developer.</div>
                     <div className="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
