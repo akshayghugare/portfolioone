@@ -2,7 +2,7 @@ import React from "react";
 import "../../src/mystyle.css"
 const Resume = () => {
     return (
-        <div className="bgImage h-screen text-white  w-full">
+        <div className=" h-screen   w-full">
         <div className=" p-8 w-full">
           <div className="flex flex-col">
           <div className=" text-2xl">Resume</div>

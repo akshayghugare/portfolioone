@@ -1,135 +1,42 @@
-import React from "react";
-import "../../src/mystyle.css"
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const projectData = [
+  { title: 'Project 1', description: 'Description of project 1.' },
+  { title: 'Project 2', description: 'Description of project 2.' },
+  { title: 'Project 3', description: 'Description of project 3.' },
+];
+
 const Projects = () => {
-    return (
-        <div className="bgImage h-screen text-white  w-full">
-        <div className=" p-8 w-full">
-          <div className="flex flex-col">
-          <div className=" text-2xl">Projects</div>
+  return (
+    <div className=" h-screen  flex justify-center items-center w-full">
+      <div className="p-8 w-full">
+        <motion.div
+          className="flex flex-col"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="text-2xl">Projects</div>
           <div className="border border-blue-500 border-2 border-t-0 border-l-0 border-r-0 w-10 mt-2"></div>
-          </div>
-          <div className="my-6">
-            <div>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</div>
-          </div>
-          
-          <div className="flex space-x-10">
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>HTML</div>
-                <div>100%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               {/* <div className="border p-1 w-0"></div> */}
-               </div>
-            </div>
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>CSS</div>
-                <div>90%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-10"></div>
-               </div>
-            </div>
-          </div>
-          <div className="flex space-x-10  mt-4">
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>Javascript</div>
-                <div>80%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-20"></div>
-               </div>
-            </div>
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>React js</div>
-                <div>75%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-32"></div>
-               </div>
-            </div>
-          </div>
-          <div className="flex space-x-10 mt-4">
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>Angular</div>
-                <div>70%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-32"></div>
-               </div>
-            </div>
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>Node js</div>
-                <div>85%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-20"></div>
-               </div>
-            </div>
-          </div>
-
-          <div className="flex space-x-10 mt-4">
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>Mongo DB</div>
-                <div>75%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-24"></div>
-               </div>
-            </div>
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>Mysql</div>
-                <div>70%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-28"></div>
-               </div>
-            </div>
-          </div>
-
-          <div className="mt-2 text-2xl">Additional</div>
-          <div className="border border-black border-2 border-t-0 border-l-0 border-r-0 w-10 mt-2"></div>
-
-          <div className="flex space-x-10 ">
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>Ai integration</div>
-                <div>50%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-80"></div>
-               </div>
-            </div>
-            <div className="w-full">
-               <div className="flex justify-between">
-                <div>Payment integration</div>
-                <div>60%</div>
-               </div>
-               <div className="flex w-full">
-               <div className="border p-1 bg-blue-500 w-30 w-full"></div>
-               <div className="border p-1 w-52"></div>
-               </div>
-            </div>
-          </div>
+        </motion.div>
+        <div className="mt-6 grid grid-cols-1 gap-4">
+          {projectData.map((project, index) => (
+            <motion.div
+              key={index}
+              className="p-4 bg-gray-200  rounded-md"
+              initial={{ x: -200, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <div className="text-xl">{project.title}</div>
+              <div className="mt-2">{project.description}</div>
+            </motion.div>
+          ))}
         </div>
-        </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Projects;
