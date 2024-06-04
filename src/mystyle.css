@@ -1,5 +1,5 @@
 .bgImage{
-    background-image: url("");
+    background-image: url("./Assets/home-bg.jpg");
     object-fit: cover;
 }
 
