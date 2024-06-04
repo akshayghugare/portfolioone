@@ -1,0 +1,9 @@
+.bgImage{
+    background-image: url("D:\mycreation\portfolio\personal-info-dashboard\src\Assets\home-bg.jpg");
+    object-fit: cover;
+}
+
+.myPicImage{
+    background: transparent;
+    opacity: 0.8;
+}
