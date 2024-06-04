@@ -1,45 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { FaSun, FaMoon } from 'react-icons/fa';
-import Sidebar from './components/Sidebar';
-import IndexRoute from './Routes/IndexRoute';
+import logo from './logo.svg';
+import './App.css';
 
-const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
+function App() {
   return (
-    <div className={`${isDarkMode ? 'dark' : ''}`}>
-      <Router>
-        <div className="flex h-screen">
-          <Sidebar />
-          <div className="flex-grow  bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
-          <button
-              onClick={toggleTheme}
-              className="mb-5 ml-2 px-4 py-2 rounded bg-blue-500 text-white fixed top-3 right-1 mt-1 flex items-center justify-center"
-              aria-label="Toggle Theme"
-            >
-              {isDarkMode ? <FaSun size={24} /> : <FaMoon size={24} />}
-            </button>
-            <Routes>
-              <Route path="/*" element={<IndexRoute />} />
-            </Routes>
-          </div>
-        </div>
-      </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;
